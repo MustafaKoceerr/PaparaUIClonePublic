@@ -1,4 +1,4 @@
-# E-commerce App
+# Papara Clone App
 
 - Papara mobile application's UI clone
 - You can find all the screens and a video about how the app works in the "screen" folder. Don't forget to take a look!
