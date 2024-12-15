@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.accounttransactions.AccountTransactionsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAccTrans"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_toolbar_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/papara_bold"
+                android:text="Hesap Hareketleri"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgDownload"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_download"
+                app:layout_constraintBottom_toBottomOf="@id/imgBackButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgBackButton" />
+
+            <TextView
+                android:id="@+id/txtDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/papara_regular"
+                android:text="İndir"
+                app:layout_constraintEnd_toEndOf="@id/imgDownload"
+                app:layout_constraintStart_toStartOf="@id/imgDownload"
+                app:layout_constraintTop_toBottomOf="@id/imgDownload" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_txt_frame_bg"
+        android:drawableStart="@drawable/ic_faq_search"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/papara_regular"
+        android:hint="Anahtar Kelime (En az 3 Karakter)"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarAccTrans" />
+
+    <ImageView
+        android:id="@+id/imgFilter"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintEnd_toEndOf="@id/edtSearch"
+        app:layout_constraintTop_toBottomOf="@id/edtSearch" />
+
+    <TextView
+        android:id="@+id/txtFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/papara_regular"
+        android:text="Filtrele"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/imgFilter"
+        app:layout_constraintStart_toStartOf="@id/imgFilter"
+        app:layout_constraintTop_toBottomOf="@id/imgFilter" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtAccType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_txt_frame_bg"
+        android:gravity="center_vertical"
+        android:hint="Hesap Türü"
+        android:padding="8dp"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="13sp"
+        app:boxBackgroundMode="none"
+        app:layout_constraintEnd_toStartOf="@id/imgFilter"
+        app:layout_constraintStart_toStartOf="@id/edtSearch"
+        app:layout_constraintTop_toBottomOf="@id/edtSearch"
+        app:layout_constraintTop_toTopOf="@id/imgFilter">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtAccType2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/white"
+            android:drawableEnd="@drawable/ic_arrow_down_black_24dp"
+            android:focusable="false"
+            android:fontFamily="@font/investment_medium"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="Hepsi"
+            android:textSize="18sp"
+            app:boxBackgroundMode="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAccTrans"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAccType" />
+</androidx.constraintlayout.widget.ConstraintLayout>

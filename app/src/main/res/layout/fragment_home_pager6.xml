@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="265dp"
+    android:background="@drawable/drawable_lighter_grey_bg"
+    android:backgroundTint="@color/light_gray"
+    tools:context=".ui.home.viewpagerfragment.HomePagerFragment6">
+
+    <TextView
+        android:id="@+id/imgPreciousHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_papara_rounded_gray"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/papara_regular"
+        android:src="@drawable/ic_no_foreign_header"
+        android:text="Tüm Varlıklarım"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="#FFFFFF"
+        app:riv_border_width="2dp"
+        app:riv_corner_radius="20dp" />
+
+
+    <TextView
+        android:id="@+id/txtPrecious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/investment_semi_bold"
+        android:text="₺999,92"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/imgPreciousHeader"
+        app:layout_constraintTop_toBottomOf="@id/imgPreciousHeader" />
+
+
+    <LinearLayout
+        android:id="@+id/linearTLAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtPrecious">
+
+        <TextView
+            android:id="@+id/txtExample"
+            style="@style/HomePagingLastPageLinearTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/turkish_flag_16px"
+            android:text="Türk Lirası Hesabı" />
+
+        <TextView
+            style="@style/HomePagingLastPageLinearBalanceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₺999,92" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearPreciousAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearTLAcc">
+
+        <TextView
+            style="@style/HomePagingLastPageLinearTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_wrap_up_gold_18dp"
+            android:text="Kıymetli Madenler" />
+
+        <TextView
+            style="@style/HomePagingLastPageLinearBalanceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSavingAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearPreciousAcc">
+
+        <TextView
+            style="@style/HomePagingLastPageLinearTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_investment_18dp"
+            android:text="Yatırım Hesabı" />
+
+        <TextView
+            style="@style/HomePagingLastPageLinearBalanceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearSavingAcc">
+
+        <TextView
+            style="@style/HomePagingLastPageLinearTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_no_saving_header_18dp"
+            android:text="Birikim Hesabı" />
+
+        <TextView
+            style="@style/HomePagingLastPageLinearBalanceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_info_request_money"
+        app:layout_constraintBottom_toBottomOf="@id/txtPrecious"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgPreciousHeader" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

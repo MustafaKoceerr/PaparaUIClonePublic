@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+    <include app:graph="@navigation/nav_money_transfer" />
+    <include app:graph="@navigation/nav_papara_card" />
+    <include app:graph="@navigation/nav_payment" />
+    <include app:graph="@navigation/nav_qr" />
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/nav_account">
+        <include app:graph="@navigation/nav_account" />
+    </navigation>
+    <include app:graph="@navigation/nav_account" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.kocerlabs.viewpager2withnavigation.onboarding.ViewPagerFragment"
+        android:label="ViewPagerFragment"
+        tools:layout="@layout/fragment_view_pager">
+        <action
+            android:id="@+id/viewPagerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/viewPagerFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            android:id="@+id/loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password">
+        <action
+            android:id="@+id/passwordFragment_to_nav_account"
+            app:destination="@id/nav_account"
+            app:popUpTo="@id/passwordFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="email"
+            android:defaultValue='""'
+            app:argType="string" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            android:id="@+id/passwordFragment_to_wrongPasswordFragment"
+            app:destination="@id/wrongPasswordFragment" />
+    </fragment>
+    <include app:graph="@navigation/nav_left_menu" />
+    <action
+        android:id="@+id/go_to_nav_left_menu"
+        app:destination="@id/nav_left_menu" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/welcomeFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/welcomeFragment_to_loginSavedUserFragment"
+            app:destination="@id/loginSavedUserFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginSavedUserFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.LoginSavedUserFragment"
+        android:label="LoginSavedUserFragment"
+        tools:layout="@layout/fragment_login_saved_user">
+        <action
+            android:id="@+id/loginSavedUserFragment_to_wrongPasswordFragment"
+            app:destination="@id/wrongPasswordFragment" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            android:id="@+id/loginSavedUserFragment_to_nav_account"
+            app:destination="@id/nav_account"
+            app:popUpTo="@id/loginSavedUserFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/loginSavedUserFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/loginSavedUserFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/wrongPasswordFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.auth.WrongPasswordFragment"
+        android:label="fragment_wrong_password"
+        tools:layout="@layout/fragment_wrong_password" />
+</navigation>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.auth.RegisterFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/SideHeadingTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_register_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarRegister" />
+
+    <TextView
+        android:id="@+id/txtDetail"
+        style="@style/AuthDescriptionTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:text="@string/register_detail_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+    <EditText
+        android:textSize="16sp"
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_txt_frame_bg"
+        android:ems="10"
+        android:hint="@string/hint_register"
+        android:inputType="text"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDetail" />
+
+
+    <TextView
+        android:id="@+id/txtProblem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/login_having_trouble"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        app:layout_constraintEnd_toEndOf="@id/btnContinue"
+        app:layout_constraintStart_toStartOf="@id/btnContinue" />
+
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:alpha="0.3"
+        android:background="@drawable/btn_black_bg"
+        android:enabled="false"
+        android:fontFamily="@font/investment_medium"
+        android:text="@string/auth_continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/splitLine"
+        app:layout_constraintEnd_toEndOf="@id/editTextText"
+        app:layout_constraintStart_toStartOf="@id/editTextText" />
+
+
+    <View
+        android:id="@+id/splitLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/graycolor"
+        app:layout_constraintBottom_toTopOf="@id/btnGoogle"
+        app:layout_constraintEnd_toEndOf="@id/txtDetail"
+        app:layout_constraintStart_toStartOf="@id/txtDetail" />
+
+    <TextView
+        android:id="@+id/txtOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:text="@string/or"
+        app:layout_constraintBottom_toBottomOf="@id/splitLine"
+        app:layout_constraintEnd_toEndOf="@id/splitLine"
+        app:layout_constraintStart_toStartOf="@id/splitLine"
+        app:layout_constraintTop_toTopOf="@id/splitLine" />
+
+
+    <Button
+        android:id="@+id/btnGoogle"
+        style="@style/AuthGoogleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/register_signup_google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/editTextText"
+        app:layout_constraintStart_toStartOf="@id/editTextText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

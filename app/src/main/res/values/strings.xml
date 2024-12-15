@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PaparaUIClone</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment!</string>
+    <string name="login_having_trouble"><u>Sorun mu yaşıyorsun?</u></string>
+    <string name="auth_continue">Devam Et</string>
+    <string name="btn_login_txt">Giriş Yap</string>
+    <string name="btn_register_txt">Hesap Oluştur</string>
+    <string name="papara">papara</string>
+    <string name="or">ya da</string>
+    <string name="auth_security_policy"><u>Güvenlik Bildirgesi</u></string>
+
+    <string name="onboarding_title_1">Işık hızında, ücretsiz para gönder.</string>
+    <string name="onboarding_title_2">Borçlanma, kazan.\n</string>
+    <string name="onboarding_title_3">Cashback ile harcadıkça anında nakit kazan.</string>
+    <string name="onboarding_title_4">Harcamalar, faturalar, kumanda sende.</string>
+    <string name="onboarding_title_5">Papara ile kolayca ödeme al.</string>
+
+    <string name="onboarding_description_1">7/24, ücretsiz para gönder ya da dilediğin kişiden para iste. Düzenli ödemelerin için talimat ver.</string>
+    <string name="onboarding_description_2">Papara Card ile tüm dünyada ve internette borçlanmadan harca. Kart ve kullanım ücreti yok!</string>
+    <string name="onboarding_description_3" formatted="false">Cashback markalarında yapacağın harcamalarda koşulsuz şartsız %5 ile %50 arasında anında nakit kazan!</string>
+    <string name="onboarding_description_4">Fatura, ulaşım ve diğer bütün ödemelerini Papara ile yap. Anlık bildirimler ve grafiklerle harcamalarını takip et, kontrol sende olsun.</string>
+    <string name="onboarding_description_5">Şahıs işletmeleri, bireysel satıcılar ve bağımsız çalışanlar için mükemmel çözüm. İster Papara numaranı paylaş ister QR kod oluştur ve ödeme al.</string>
+    <string name="login_signin_google">Google ile Giriş Yap</string>
+    <string name="mail_or_phone_number">E-posta adresi ya da cep numarası</string>
+    <string name="login_description">E-posta adresi, cep numarası ya da Google hesabından biriyle giriş yap.</string>
+    <string name="hint_register">Cep telefonu numarası</string>
+    <string name="register_detail_txt">Cep telefonu numaran ya da Google hesabından biriyle hesap aç.</string>
+    <string name="register_signup_google">Google ile Hesap Oluştur</string>
+    <string name="enter_password">6 haneli şifreni gir.</string>
+    <string name="account_type">Türk Lirası Hesabı</string>
+    <string name="iban_no"><u>TR11 3452 6785 7896 9029 4680 11</u></string>
+    <string name="more_info"><u>Detaylı Bilgi</u></string>
+    <string name="forget_me"><u>Beni Unut</u></string>
+    <string name="forget_password"><u>Şifremi unuttum</u></string>
+    <string name="cant_access_email_phone"><![CDATA[E-posta & Cep telefonuma erişimim yok]]></string>
+
+</resources>

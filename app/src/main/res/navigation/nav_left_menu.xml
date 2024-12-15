@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_left_menu"
+    app:startDestination="@id/drawerMenuFragment">
+
+    <dialog
+        android:id="@+id/drawerMenuFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.drawermenu.DrawerMenuFragment"
+        android:label="fragment_drawer_menu"
+        tools:layout="@layout/fragment_drawer_menu" />
+</navigation>

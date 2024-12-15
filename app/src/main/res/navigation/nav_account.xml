@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_account"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_short"
+            app:popExitAnim="@anim/fade_out_short" />
+        <action
+            android:id="@+id/homeFragment_to_accountTransactionsFragment"
+            app:destination="@id/accountTransactionsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in_short"
+            app:popExitAnim="@anim/fade_out_short" />
+        <action
+            android:id="@+id/homeFragment_to_transactionDetailsFragment"
+            app:destination="@id/transactionDetailsFragment"
+            app:enterAnim="@anim/fade_in_short"
+            app:exitAnim="@anim/fade_out_short" />
+        <action
+            android:id="@+id/homeFragment_to_drawerMenuFragment"
+            app:destination="@id/drawerMenuFragment"
+            app:enterAnim="@anim/fade_in_short"
+            app:exitAnim="@anim/fade_out_short" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.chat.ChatsFragment"
+        android:label="fragment_chats"
+        tools:layout="@layout/fragment_chats" />
+    <fragment
+        android:id="@+id/accountTransactionsFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.accounttransactions.AccountTransactionsFragment"
+        android:label="fragment_account_transactions"
+        tools:layout="@layout/fragment_account_transactions">
+        <action
+            android:id="@+id/accountTransactionsFragment_to_transactionDetailsFragment"
+            app:destination="@id/transactionDetailsFragment" />
+        <action
+            android:id="@+id/accountTransactionsFragment_to_accTypeFragment"
+            app:destination="@id/accTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionDetailsFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.transactiondetails.TransactionDetailsFragment"
+        android:label="fragment_transaction_details"
+        tools:layout="@layout/fragment_transaction_details">
+        <argument
+            android:name="transactionModel"
+            app:argType="com.kocerlabs.paparauiclone.data.network.model.TransactionModel" />
+    </fragment>
+    <dialog
+        android:id="@+id/drawerMenuFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.drawermenu.DrawerMenuFragment"
+        android:label="fragment_drawer_menu"
+        tools:layout="@layout/fragment_drawer_menu" />
+    <dialog
+        android:id="@+id/accTypeFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.home.accounttransactions.AccTypeFragment"
+        android:label="fragment_acc_type"
+        tools:layout="@layout/fragment_acc_type" />
+</navigation>

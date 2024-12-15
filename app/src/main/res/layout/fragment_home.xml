@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgDrawableMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/drawable_grey_bg"
+                android:padding="12dp"
+                android:src="@drawable/ic_drawer_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgChat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/edit_txt_frame_bg"
+                android:padding="4dp"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintBottom_toBottomOf="@id/imgDrawableMenu"
+                app:layout_constraintStart_toEndOf="@id/imgDrawableMenu"
+                app:layout_constraintTop_toTopOf="@id/imgDrawableMenu" />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/dark_gray"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@id/txtUserPaparaNo"
+                app:layout_constraintEnd_toStartOf="@id/imgProfile"
+                app:layout_constraintTop_toTopOf="@id/imgProfile"
+                tools:text="Mustafa Koçer" />
+
+            <TextView
+                android:id="@+id/txtUserPaparaNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Papara No: 1231231233"
+                android:textColor="@color/dark_gray"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+                app:layout_constraintEnd_toStartOf="@id/imgProfile"
+                app:layout_constraintTop_toBottomOf="@id/txtUserName" />
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_txt_frame_bg"
+                android:padding="4dp"
+                android:src="@drawable/ic_add_profile_photo"
+                app:layout_constraintBottom_toBottomOf="@id/imgDrawableMenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgDrawableMenu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarHome">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerStory" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/dotIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                app:dampingRatio="0.5"
+                app:dotsColor="@color/black"
+                app:dotsCornerRadius="20dp"
+                app:dotsSize="6dp"
+                app:dotsSpacing="4dp"
+                app:dotsStrokeColor="@color/dots_fray_color"
+                app:dotsStrokeWidth="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewPager2"
+                app:stiffness="300" />
+
+            <TextView
+                android:id="@+id/txtTransactionsTitle"
+                style="@style/HomeSubheadingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="HESAP HAREKETLERİ"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotIndicator" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTransactionsTitle" />
+
+            <TextView
+                android:id="@+id/txtCashbackTitle"
+                style="@style/HomeSubheadingTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/arrow_right_drawable"
+                android:text="CASHBACK"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerTransactions" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutCashback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/drawable_grey_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/txtCashbackTitle">
+
+                <TextView
+                    android:id="@+id/txtThisMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bu ay kazandığın"
+                    android:textColor="@color/dark_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtCanEarn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bu ay kazanabileceğin"
+                    android:textColor="@color/dark_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtThisMonth" />
+
+                <TextView
+                    android:id="@+id/txtThisMonthMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_bold"
+                    android:text="₺535,00"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@id/txtThisMonth"
+                    app:layout_constraintTop_toBottomOf="@id/txtThisMonth" />
+
+                <TextView
+                    android:id="@+id/txtCanEarnMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_bold"
+                    android:text="₺2.225,00"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@id/txtCanEarn"
+                    app:layout_constraintTop_toBottomOf="@id/txtCanEarn" />
+
+                <View
+                    android:id="@+id/viewSplitter"
+                    android:layout_width="0dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/pager_stroke"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtCanEarnMoney" />
+
+                <ImageView
+                    android:id="@+id/imgCashback"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_gray"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_info_cashback"
+                    app:layout_constraintBottom_toBottomOf="@id/viewSplitter"
+                    app:layout_constraintEnd_toEndOf="@id/viewSplitter"
+                    app:layout_constraintHorizontal_bias="0.24"
+                    app:layout_constraintStart_toStartOf="@id/viewSplitter"
+                    app:layout_constraintTop_toBottomOf="@id/viewSplitter" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutInviteFriend"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/drawable_pink_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                app:layout_constraintTop_toBottomOf="@id/layoutCashback">
+
+                <TextView
+                    android:id="@+id/txtInviteFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_bold"
+                    android:text="Arkadaşını Davet Et,\nBirlikte Kazan"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtMoreInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/papara_regular"
+                    android:text="@string/more_info"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txtInviteFriend" />
+
+                <ImageView
+                    android:id="@+id/imgGift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_wrap_up_gift"
+                    app:layout_constraintBottom_toBottomOf="@id/txtMoreInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtInviteFriend"
+                    app:layout_constraintTop_toTopOf="@id/txtInviteFriend" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/layoutInviteFriend" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

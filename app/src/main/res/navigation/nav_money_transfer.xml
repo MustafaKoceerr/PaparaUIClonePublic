@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_money_transfer"
+    app:startDestination="@id/moneyTransferFragment">
+    <dialog
+        android:id="@+id/moneyTransferFragment"
+        android:name="com.kocerlabs.paparauiclone.ui.moneytransfer.MoneyTransferFragment"
+        tools:layout="@layout/fragment_money_transfer"
+        android:label="MoneyTransferFragment" />
+
+</navigation>

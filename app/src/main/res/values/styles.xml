@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OnBoardingBaseButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_marginHorizontal">12dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+    </style>
+
+    <style name="OnBoardingDetailTxtStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:titleMarginTop">18dp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="OnBoardingTitleTxtStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/papara_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SideHeadingTextStyle">
+        <item name="android:fontFamily">@font/papara_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+
+    <style name="AuthDescriptionTextStyle">
+        <!-- TextView ayarları burada -->
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:layout_marginHorizontal">28dp</item>
+    </style>
+
+    <style name="AuthLoginButton">
+        <!-- Button'ın stil özellikleri -->
+        <item name="android:enabled">false</item>
+        <item name="android:alpha">0.3</item>
+        <item name="android:background">@drawable/btn_black_bg</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AuthGoogleButton">
+        <!-- Button'ın stil özellikleri -->
+        <item name="android:background">@drawable/btn_red_bg</item>
+        <item name="android:drawableStart">@drawable/ic_register_google</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+        <item name="android:paddingHorizontal">12dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PasswordEditTextStyle">
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:background">@drawable/edt_txt_box_shape_bg</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+
+    <style name="HomePagingButtonStyle">
+        <item name="android:background">@drawable/btn_white_drawable_bg</item>
+        <item name="android:fontFamily">@font/investment_semi_bold</item>
+        <item name="android:outlineProvider">none</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="HomePagingTextStyle">
+        <item name="android:fontFamily">@font/investment_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="HomePagingImgStyle">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="HomePagingDescTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="HomePagingLastPageLinearTextStyle">
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="HomePagingLastPageLinearBalanceTextStyle">
+        <item name="android:fontFamily">@font/investment_semi_bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="HomeSubheadingTextStyle">
+        <item name="android:drawableEnd">@drawable/arrow_right_drawable</item>
+        <item name="android:fontFamily">@font/papara_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:drawablePadding">4dp</item>
+    </style>
+
+    <style name="MyTransparentBottomSheetDialogTheme" parent="Theme.AppCompat.Light">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.Light" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <style name="WrongPassGrayTextStyle">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/papara_gray_dark_2</item>
+    </style>
+
+    <style name="WrongPassBlackTextStyle">
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TransDetailsIconDetailTxtStyle">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TransDetailsTxtStyle">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:fontFamily">@font/investment_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>
